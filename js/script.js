@@ -140,10 +140,14 @@ window.addEventListener('DOMContentLoaded', () => {
         overlay.classList.add('animate__fadeIn');
         overlay.classList.remove('animate__fadeOut');
         overlay.style.display = 'block';
+        setTimeout(() => {
+            cartBtn.style.display = 'none';
+        }, 400);
     });
 
     function cartCloseBlock(btn) {
         btn.addEventListener('click', () => {
+            cartBtn.style.display = 'block';
             body.style.overflowY = 'scroll';
             cartModal.classList.add('animate__fadeOut');
             cartBtn.classList.remove('animate__fadeOut');
