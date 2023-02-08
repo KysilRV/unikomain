@@ -288,6 +288,18 @@ window.addEventListener('DOMContentLoaded', () => {
         removeNotFound();
         removeBlock(card.querySelector('.cart__closeBlock'));
 
+        document.querySelectorAll('.cart__input').forEach(input => {
+            input.addEventListener('input', () => {
+                input.value = input.value.replace(/\D/g, '');
+            });
+            input.addEventListener('input', function() {
+                if (this.value <= 0) {
+                    this.value = 1;
+                };
+                calcSum(document.querySelectorAll('.cart__block'));
+            });
+        });
+
         const thisLot = card.querySelector('.cart__lot');
                 
         thisLot.addEventListener('click', function(e) {
