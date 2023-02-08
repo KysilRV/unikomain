@@ -651,13 +651,9 @@ window.addEventListener('DOMContentLoaded', () => {
     filterBtn.addEventListener('click', () => {
         if (filterBlock.style.opacity == '1') {
             filterBlock.style.opacity = '0';
-            filterBlock.classList.add('animate__fadeOutRightBig'); 
-            filterBlock.classList.remove('animate__fadeInRightBig');
             chevronDown.style.transform = 'rotate(0deg)';
         } else {
             filterBlock.style.opacity = '1';
-            filterBlock.classList.add('animate__fadeInRightBig');
-            filterBlock.classList.remove('animate__fadeOutRightBig');
             chevronDown.style.transform = 'rotate(-90deg)';
         };
     });
