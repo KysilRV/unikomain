@@ -654,17 +654,11 @@ window.addEventListener('DOMContentLoaded', () => {
             filterBlock.classList.add('animate__fadeOutRightBig'); 
             filterBlock.classList.remove('animate__fadeInRightBig');
             chevronDown.style.transform = 'rotate(0deg)';
-            filterBlock.style.visibility = 'hidden';
-            setTimeout(() => {
-                filterBlock.style.display = 'none';
-            }, 400);
         } else {
-            filterBlock.style.display = 'block';
             filterBlock.style.opacity = '1';
             filterBlock.classList.add('animate__fadeInRightBig');
             filterBlock.classList.remove('animate__fadeOutRightBig');
             chevronDown.style.transform = 'rotate(-90deg)';
-            filterBlock.style.visibility = 'visible';
         };
     });
 
